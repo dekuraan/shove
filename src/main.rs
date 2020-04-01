@@ -5,7 +5,9 @@ use std::{
 };
 fn main() {
     let empty_string = "".to_owned();
-    let mut commit_message = env::args().collect::<Vec<String>>().join(" ");
+    let mut commit_message = env::args();
+    commit_message.next();
+    let mut commit_message = commit_message.collect::<Vec<String>>().join(" ");
     println!("{}", commit_message);
     if commit_message == empty_string {
         commit_message =
