@@ -6,8 +6,8 @@ use std::{
 fn main() {
     let empty_string = "".to_owned();
     let mut commit_message = env::args().collect::<Vec<String>>().join(" ");
+    println!("{}", commit_message);
     if commit_message == empty_string {
-        println!("empty string");
         commit_message =
             "Pushed with ~~love~~ [shove](https://github.com/OriontheCat/shove)".to_owned();
     }
