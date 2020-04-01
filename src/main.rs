@@ -11,7 +11,7 @@ fn main() {
     println!("{}", commit_message);
     if commit_message == empty_string {
         commit_message =
-            "Pushed with l̵o̵v̵e̵ l̶o̶v̶e̶ shove".to_owned();
+            "Pushed with l̵o̵v̵e̵ shove".to_owned();
     }
     let output = Command::new("git")
         .args(&["add", "."])
